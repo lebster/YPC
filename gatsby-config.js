@@ -8,6 +8,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-lodash`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./data/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       // options: {

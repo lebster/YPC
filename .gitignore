@@ -1,6 +1,7 @@
 content/attachments/
 content/out.csv
 content/parsed.json
+data/
 
 # Logs
 logs

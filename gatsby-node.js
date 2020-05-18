@@ -44,7 +44,7 @@ const convertFile = () => {
         output: process.stdout,
         console: false
     });
-    var writableStream = fs.createWriteStream('./content/parsed.json', {flags: 'w'});
+    var writableStream = fs.createWriteStream('./data/parsed.json', {flags: 'w'});
     writableStream.write('[');
     var firstLine = true;
     var gameInfo = {};
