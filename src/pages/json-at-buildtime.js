@@ -1,11 +1,26 @@
 import React from "react"
-import JSONData from "../../content/games.json"
+import PLAYERDATA from "../../content/parsed.json"
+import { calculateWeeklyTotal } from "../util/calculations"
+
+const JSONData = calculateWeeklyTotal(PLAYERDATA);
+console.log(JSONData);
+
 const JSONbuildtime = () => (
+
     <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-        <h1>{JSONData.title}</h1>
+        <h1>Totals</h1>
         <ul>
-            {JSONData.content.map((data, index) => {
-                return <li key={`content_item_${index}`}>{data.item}</li>
+            {JSONData.map((data, index) => {
+                return <li key={`content_item_${index}`}>
+                    <div>
+                        <div>
+                            {data.Name}
+                        </div>
+                        <div>
+                            {data.Profit}
+                        </div>
+                    </div>
+                </li>
             })}
         </ul>
     </div>

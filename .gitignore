@@ -1,3 +1,7 @@
+content/attachments/
+content/out.csv
+content/parsed.json
+
 # Logs
 logs
 *.log
